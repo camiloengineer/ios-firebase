@@ -13,6 +13,8 @@
 		B27C6D082865CC4C007023DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27C6D062865CC4C007023DA /* Main.storyboard */; };
 		B27C6D0A2865CC4E007023DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27C6D092865CC4E007023DA /* Assets.xcassets */; };
 		B27C6D0D2865CC4E007023DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27C6D0B2865CC4E007023DA /* LaunchScreen.storyboard */; };
+		B27C6D152865CFE5007023DA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B27C6D142865CFE5007023DA /* GoogleService-Info.plist */; };
+		B27C6D182865D0BC007023DA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B27C6D172865D0BC007023DA /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		B27C6D092865CC4E007023DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B27C6D0C2865CC4E007023DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B27C6D0E2865CC4E007023DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27C6D142865CFE5007023DA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27C6D182865D0BC007023DA /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				B27C6D092865CC4E007023DA /* Assets.xcassets */,
 				B27C6D0B2865CC4E007023DA /* LaunchScreen.storyboard */,
 				B27C6D0E2865CC4E007023DA /* Info.plist */,
+				B27C6D142865CFE5007023DA /* GoogleService-Info.plist */,
 			);
 			path = FirebaseTutorial;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = FirebaseTutorial;
+			packageProductDependencies = (
+				B27C6D172865D0BC007023DA /* FirebaseAnalytics */,
+			);
 			productName = FirebaseTutorial;
 			productReference = B27C6CFD2865CC4C007023DA /* FirebaseTutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = B27C6CF42865CC4C007023DA;
+			packageReferences = (
+				B27C6D162865D0BC007023DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B27C6CFE2865CC4C007023DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B27C6D0D2865CC4E007023DA /* LaunchScreen.storyboard in Resources */,
+				B27C6D152865CFE5007023DA /* GoogleService-Info.plist in Resources */,
 				B27C6D0A2865CC4E007023DA /* Assets.xcassets in Resources */,
 				B27C6D082865CC4C007023DA /* Main.storyboard in Resources */,
 			);
@@ -290,9 +302,11 @@
 				DEVELOPMENT_TEAM = 7R3HZ53HFV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseTutorial/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FIrebase;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,9 +332,11 @@
 				DEVELOPMENT_TEAM = 7R3HZ53HFV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FirebaseTutorial/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FIrebase;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B27C6D162865D0BC007023DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B27C6D172865D0BC007023DA /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B27C6D162865D0BC007023DA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B27C6CF52865CC4C007023DA /* Project object */;
 }
