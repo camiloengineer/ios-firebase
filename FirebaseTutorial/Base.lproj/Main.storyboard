@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B5o-Vd-58M">
-                                <rect key="frame" x="16" y="104" width="382" height="136"/>
+                                <rect key="frame" x="16" y="104" width="382" height="184"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EBh-FH-YEi">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
@@ -55,6 +55,7 @@
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.011764705882352941" green="0.60784313725490191" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                     </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -68,6 +69,7 @@
                                                     <backgroundConfiguration key="background">
                                                         <color key="backgroundColor" red="0.17254901960784313" green="0.2196078431372549" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                     </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -79,6 +81,21 @@
                                             <constraint firstAttribute="height" constant="40" id="cfQ-3K-noJ"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tn-a5-QpV">
+                                        <rect key="frame" x="0.0" y="144" width="382" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="google" title="Google">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                            <color key="baseForegroundColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="googleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jlj-BA-9Sy"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -92,7 +109,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="mVd-vd-XSe"/>
                     <connections>
+                        <outlet property="authStackView" destination="B5o-Vd-58M" id="lB0-hg-KSC"/>
                         <outlet property="emailTextField" destination="EBh-FH-YEi" id="QRf-9A-iHd"/>
+                        <outlet property="googleButton" destination="2Tn-a5-QpV" id="xcq-rw-lo1"/>
                         <outlet property="loginButton" destination="r6z-95-7NW" id="77G-QO-E5v"/>
                         <outlet property="passwordTextField" destination="C6F-lM-4im" id="jOe-RP-9pE"/>
                         <outlet property="signUpButton" destination="Kt7-WR-FKO" id="r6k-s6-aKW"/>
@@ -104,6 +123,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="google" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -11,10 +11,12 @@ import FirebaseAuth
 
 class AuthViewController: UIViewController {
 
+    @IBOutlet weak var authStackView: UIStackView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var googleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,15 @@ class AuthViewController: UIViewController {
         
         // Analytics Event
         Analytics.logEvent("InitScreen", parameters: ["message":"integración de firebase completa"])
+        
+        //Comprobar la sesión del usuario autenticado
+        let defaults = UserDefaults.standard
+        if let email = defaults.value(forKey: "email") as? String,
+           let provider = defaults.value(forKey: "provider") as? String {
+            authStackView.isHidden = true
+            
+            navigationController?.pushViewController(HomeViewController(email: email, provider: ProviderType.init(rawValue: provider)!), animated: false)
+        }
     }
 
     @IBAction func signUpButtonAction(_ sender: Any) {
@@ -66,6 +77,10 @@ class AuthViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func googleButtonAction(_ sender: Any) {
+    }
+    
     
 }
 
